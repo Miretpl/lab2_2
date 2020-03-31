@@ -38,7 +38,10 @@ class SimilarityFinderStateTest {
     }
 
     @Test public void checkStateBothSeqAreFilled () {
+        int[] seq1 = new int[]{1, 2, 3}, seq2 = new int[]{1, 2, 3};
 
+        double result = similarityFinder.calculateJackardSimilarity(seq1, seq2);
+        assertEquals(result, 1.0);
     }
 
     @Test public void checkStateFullMatch () {

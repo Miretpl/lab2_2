@@ -4,6 +4,8 @@ import edu.iis.mto.search.SequenceSearcherMock;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+
 class SimilarityFinderBehaviorTest {
 
     private SimilarityFinder similarityFinder = null;
@@ -15,7 +17,9 @@ class SimilarityFinderBehaviorTest {
     }
 
     @Test public void checkBehaviorWhenBothSeqAreEmpty () {
-
+        int[] seq1 = new int[]{}, seq2 = new int[]{};
+        
+        assertDoesNotThrow(() -> similarityFinder.calculateJackardSimilarity(seq1, seq2));
     }
 
     @Test public void checkBehaviorWhenFirstSeqIsEmpty () {

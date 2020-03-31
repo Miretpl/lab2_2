@@ -45,6 +45,9 @@ class SimilarityFinderStateTest {
     }
 
     @Test public void checkStateNoMatch () {
+        int[] seq1 = new int[]{1, 2, 3}, seq2 = new int[]{4, 5, 6};
 
+        double result = similarityFinder.calculateJackardSimilarity(seq1, seq2);
+        assertEquals(result, 0.0);
     }
 }

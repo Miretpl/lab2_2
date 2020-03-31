@@ -54,7 +54,9 @@ class SimilarityFinderBehaviorTest {
     }
 
     @Test public void checkBehaviorSecondSeqIsNull () {
+        int[] seq1 = new int[]{1, 2, 3}, seq2 = null;
 
+        assertThrows(IllegalArgumentException.class, () -> similarityFinder.calculateJackardSimilarity(seq1, seq2));
     }
 
     @Test public void checkBehaviorWhenSequenceSeacherIsNull () {

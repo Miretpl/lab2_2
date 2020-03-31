@@ -34,14 +34,6 @@ class SimilarityFinderBehaviorTest {
         assertDoesNotThrow(() -> similarityFinder.calculateJackardSimilarity(seq1, seq2));
     }
 
-    @Test public void checkBehaviorWhenFirstSeqIsFilled () {
-
-    }
-
-    @Test public void checkBehaviorSecondSeqIsFilled () {
-
-    }
-
     @Test public void checkBehaviorBothSeqAreFilled () {
 
     }

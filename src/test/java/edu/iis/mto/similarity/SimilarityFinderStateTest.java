@@ -37,14 +37,6 @@ class SimilarityFinderStateTest {
         assertEquals(result, 0.0);
     }
 
-    @Test public void checkStateWhenFirstSeqIsFilled () {
-
-    }
-
-    @Test public void checkStateSecondSeqIsFilled () {
-
-    }
-
     @Test public void checkStateBothSeqAreFilled () {
 
     }

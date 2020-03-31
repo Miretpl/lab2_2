@@ -18,12 +18,14 @@ class SimilarityFinderBehaviorTest {
 
     @Test public void checkBehaviorWhenBothSeqAreEmpty () {
         int[] seq1 = new int[]{}, seq2 = new int[]{};
-        
+
         assertDoesNotThrow(() -> similarityFinder.calculateJackardSimilarity(seq1, seq2));
     }
 
     @Test public void checkBehaviorWhenFirstSeqIsEmpty () {
+        int[] seq1 = new int[]{}, seq2 = new int[]{1, 2, 3};
 
+        assertDoesNotThrow(() -> similarityFinder.calculateJackardSimilarity(seq1, seq2));
     }
 
     @Test public void checkBehaviorSecondSeqIsEmpty () {

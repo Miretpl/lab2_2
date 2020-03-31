@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class SimilarityFinderBehaviorTest {
 
@@ -41,7 +42,9 @@ class SimilarityFinderBehaviorTest {
     }
 
     @Test public void checkBehaviorBothSeqAreNull () {
+        int[] seq1 = null, seq2 = null;
 
+        assertThrows(NullPointerException.class, () -> similarityFinder.calculateJackardSimilarity(seq1, seq2));
     }
 
     @Test public void checkBehaviorFirstSeqIsNull () {

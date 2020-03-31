@@ -1,8 +1,18 @@
 package edu.iis.mto.similarity;
 
+import edu.iis.mto.search.SequenceSearcherMock;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class SimilarityFinderBehaviorTest {
+
+    private SimilarityFinder similarityFinder = null;
+    private SequenceSearcherMock sequenceSearcherMock = null;
+
+    @BeforeEach void init() {
+        sequenceSearcherMock = new SequenceSearcherMock();
+        similarityFinder = new SimilarityFinder(sequenceSearcherMock);
+    }
 
     @Test public void checkBehaviorWhenBothSeqAreEmpty () {
 

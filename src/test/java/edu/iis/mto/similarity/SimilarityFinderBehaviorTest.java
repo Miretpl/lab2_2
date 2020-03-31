@@ -35,7 +35,9 @@ class SimilarityFinderBehaviorTest {
     }
 
     @Test public void checkBehaviorBothSeqAreFilled () {
+        int[] seq1 = new int[]{1, 2, 3}, seq2 = new int[]{1, 2, 3};
 
+        assertDoesNotThrow(() -> similarityFinder.calculateJackardSimilarity(seq1, seq2));
     }
 
     @Test public void checkBehaviorBothSeqAreNull () {

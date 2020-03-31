@@ -24,7 +24,10 @@ class SimilarityFinderStateTest {
     }
 
     @Test public void checkStateWhenFirstSeqIsEmpty () {
+        int[] seq1 = new int[]{}, seq2 = new int[]{1, 2, 3};
 
+        double result = similarityFinder.calculateJackardSimilarity(seq1, seq2);
+        assertEquals(result, 0.0);
     }
 
     @Test public void checkStateSecondSeqIsEmpty () {
